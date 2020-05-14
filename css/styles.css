@@ -30,10 +30,17 @@ body {
 }
 
 .menu ul {
-  display: flex;
-  justify-content: space-around;
+  display: inline;
   list-style-type: none;
 }
+
+@media only screen and (min-width: 900px) {
+  .menu ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+} 
 
 .menu li {
   flex-grow: 1;
@@ -73,9 +80,16 @@ figcaption {
 }
 
 .portfolio img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%; 
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+@media only screen and (min-width: 900px) {
+  .portfolio img {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .box {
@@ -84,16 +98,27 @@ figcaption {
   border-radius: 10px;
   background-color: rgba(33, 33, 33, 0.7);
   padding: 20px;
+  margin: 0 10px;
 }
 
 .portfolio {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 900px) {
+  .portfolio {
+    justify-content: space-between;
+  }
 }
 
 .portfolio figure {
   margin: 40px 20px;
 }
+
+
 
 
 /*
